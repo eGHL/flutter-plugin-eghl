@@ -115,7 +115,6 @@ public class EghlflutterPlugin implements MethodCallHandler, PluginRegistry.Acti
       return false;
     }
     else if (requestCode == EGHL.REQUEST_PAYMENT) {
-      isInProgress = false;
       String message = data.getStringExtra(EGHL.TXN_MESSAGE);
       switch (resultCode) {
         case EGHL.TRANSACTION_SUCCESS:
