@@ -1,0 +1,22 @@
+PODS:
+  - eghlflutter (1.0.0):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - eghlflutter (from `.symlinks/plugins/eghlflutter/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  eghlflutter:
+    :path: ".symlinks/plugins/eghlflutter/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  eghlflutter: 86b94ba3d99353eca9a4c246e01e06eea42cabcb
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+
+PODFILE CHECKSUM: 3dbe063e9c90a5d7c9e4e76e70a821b9e2c1d271
+
+COCOAPODS: 1.8.4

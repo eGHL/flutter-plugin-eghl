@@ -1,0 +1,10 @@
+
+lib/
+Test/
+CHANGELOG.md
+Eghlflutter.iml
+
+pubspec.lock
+pubspec.yaml
+
+LICENSE
