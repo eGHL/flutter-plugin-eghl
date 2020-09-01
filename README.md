@@ -34,7 +34,8 @@ Map<String, dynamic> payment = {
   'Password': 'sit12345',
   'LanguageCode': 'EN',
   'PageTimeout': '600',
-  'PaymentGateway': 'https://test2pay.ghl.com/IPGSG/Payment.aspx'
+  'PaymentGateway': 'true',    //default is true for staging, false for staging
+  'EnableCardPage': 'false',  //default is false
 };
 
 result = await Eghlflutter.executePayment(payment);

@@ -2,7 +2,7 @@
 #import <objc/runtime.h>
 #import <EGHL/EGHL.h>
 
-@implementation EghlflutterPlugin
+ @implementation EghlflutterPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
       methodChannelWithName:@"eghlflutter"
@@ -15,7 +15,7 @@
   if ([@"executePayment" isEqualToString:call.method]) {
       PaymentRequestPARAM *payParams = [[PaymentRequestPARAM alloc] init];
       EGHLPayment *eghlPay = [[EGHLPayment alloc] init];
-
+      
       payParams.TransactionType = [call.arguments valueForKey:@"TransactionType"];
       payParams.PaymentID = [call.arguments valueForKey:@"PaymentId"];
       payParams.OrderNumber = [call.arguments valueForKey:@"OrderNumber"];
@@ -69,12 +69,13 @@
       payParams.PreCheckoutId = [call.arguments valueForKey:@"PreCheckoutId"];
       payParams.mpLightboxParameter = [call.arguments valueForKey:@"mpLightboxParameter"];
       payParams.sdkTimeOut = [[call.arguments objectForKey:@"sdkTimeout"] doubleValue];
-      NSString *gatewayUrl = [call.arguments valueForKey:@"PaymentGateway"];
-      if([gatewayUrl isEqualToString:@"https://test2pay.ghl.com/IPGSG/Payment.aspx"]) {
-          payParams.settingDict = @{
-              EGHL_DEBUG_PAYMENT_URL: @true,
-          };
-      }
+      BOOL gatewayUrl = [[call.arguments valueForKey:@"PaymentGateway"] boolValue];
+      BOOL cardPageEnable = [[call.arguments valueForKey:@"EnableCardPage"] boolValue];
+      payParams.settingDict = @{
+          EGHL_DEBUG_PAYMENT_URL: [NSNumber numberWithBool:gatewayUrl],
+          EGHL_ENABLED_CARD_PAGE: [NSNumber numberWithBool:cardPageEnable],
+      };
+
       
       UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
 

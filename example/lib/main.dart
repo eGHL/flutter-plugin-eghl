@@ -74,7 +74,8 @@ class _MyAppState extends State<MyApp> {
         'Password': 'sit12345',
         'LanguageCode': 'EN',
         'PageTimeout': '600',
-        'PaymentGateway': 'https://test2pay.ghl.com/IPGSG/Payment.aspx'
+        'PaymentGateway': true,
+        'EnableCardPage': false,
       };
 
       result = await Eghlflutter.executePayment(payment);
