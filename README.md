@@ -34,7 +34,7 @@ Map<String, dynamic> payment = {
   'Password': 'sit12345',
   'LanguageCode': 'EN',
   'PageTimeout': '600',
-  'PaymentGateway': 'true',    //default is true for staging, false for staging
+  'PaymentGateway': 'true',    //default is true for staging, false for production
   'EnableCardPage': 'false',  //default is false
 };
 
