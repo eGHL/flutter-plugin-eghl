@@ -36,7 +36,7 @@ public class EghlPaymentParam {
     private String password = "";
 
     @SerializedName("PaymentGateway")
-    private String paymentGateway = "";
+    private boolean paymentGateway = true;
 
     @SerializedName("Production")
     private boolean isProduction = true;
@@ -83,6 +83,9 @@ public class EghlPaymentParam {
 
     @SerializedName("PaymentTimeout")
     private int paymentTimeout = -1;
+
+    @SerializedName("EnableCardPage")
+    private boolean cardPage = false;
 
     @SerializedName("CardHolder")
     private String cardHolder = "";
@@ -165,11 +168,11 @@ public class EghlPaymentParam {
         this.isProduction = production;
     }
 
-    public String getPaymentGateway() {
+    public boolean getPaymentGateway() {
         return paymentGateway;
     }
 
-    public void setPaymentGateway(String paymentGateway) {
+    public void setPaymentGateway(boolean paymentGateway) {
         this.paymentGateway = paymentGateway;
     }
 
@@ -360,6 +363,12 @@ public class EghlPaymentParam {
     public void setPageTimeout(String pageTimeout) {
         this.pageTimeout = pageTimeout;
     }
+
+    public void setCardPage(Boolean cardPage) {
+        this.cardPage = cardPage;
+    }
+
+    public boolean getCardPage() { return cardPage; }
 
     public String getCardHolder() {
         return cardHolder;
