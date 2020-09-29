@@ -71,9 +71,11 @@
       payParams.sdkTimeOut = [[call.arguments objectForKey:@"sdkTimeout"] doubleValue];
       BOOL gatewayUrl = [[call.arguments valueForKey:@"PaymentGateway"] boolValue];
       BOOL cardPageEnable = [[call.arguments valueForKey:@"EnableCardPage"] boolValue];
+      BOOL triggerReturnUrl = [[call.arguments valueForKey:@"TriggerReturnURL"] boolValue];
       payParams.settingDict = @{
           EGHL_DEBUG_PAYMENT_URL: [NSNumber numberWithBool:gatewayUrl],
           EGHL_ENABLED_CARD_PAGE: [NSNumber numberWithBool:cardPageEnable],
+          EGHL_SHOULD_TRIGGER_RETURN_URL: [NSNumber numberWithBool:triggerReturnUrl],
       };
 
       
