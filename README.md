@@ -26,16 +26,16 @@ Map<String, dynamic> payment = {
   'CustName': 'somebody',
   'CustEmail': 'somebody@someone.com',
   'CustPhone': '0123456789',
-
-  'MerchantReturnURL': 'SDK',
-  'MerchantCallbackURL': 'SDK',
+  'MerchantReturnURL': 'SDK',   //merchant system's browser redirect
+  'MerchantCallbackURL': 'SDK', //server-to-server URL as an additional link to merchant's website
 
   'ServiceId': 'SIT',
   'Password': 'sit12345',
   'LanguageCode': 'EN',
   'PageTimeout': '600',
-  'PaymentGateway': 'true',    //default is true for staging, false for production
-  'EnableCardPage': 'false',  //default is false
+  'PaymentGateway': true,      //default is true for staging, false for production
+  'EnableCardPage': false,    //default is false
+  'TriggerReturnURL': false, //default is false
 };
 
 result = await Eghlflutter.executePayment(payment);
