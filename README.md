@@ -27,7 +27,7 @@ Map<String, dynamic> payment = {
   'CustEmail': 'somebody@someone.com',
   'CustPhone': '0123456789',
   'MerchantReturnURL': 'SDK',   //merchant system's browser redirect
-  'MerchantCallbackURL': 'SDK', //server-to-server URL as an additional link to merchant's website
+  'MerchantCallBackURL': 'SDK', //server-to-server URL as an additional link to merchant's website
 
   'ServiceId': 'SIT',
   'Password': 'sit12345',
