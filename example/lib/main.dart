@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-
 import 'package:eghlflutter/eghlflutter.dart';
 
 void main() => runApp(MyApp());
@@ -40,7 +38,7 @@ class _MyAppState extends State<MyApp> {
                   textColor: Colors.black,
                   padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                   splashColor: Colors.amber,
-                )
+                ),
               ],
             ),
           ),
@@ -49,6 +47,7 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
+  // ignore: non_constant_identifier_names
   void _Pay(BuildContext context) async {
     String result = '';
     String paymentId = 'SIT${new DateTime.now().millisecondsSinceEpoch}';
@@ -68,7 +67,7 @@ class _MyAppState extends State<MyApp> {
         'CustPhone': '0123456789',
 
         'MerchantReturnURL': 'SDK',
-        'MerchantCallbackURL': 'SDK',
+        'MerchantCallBackURL': 'SDK',
 
         'ServiceId': 'SIT',
         'Password': 'sit12345',
@@ -76,6 +75,7 @@ class _MyAppState extends State<MyApp> {
         'PageTimeout': '600',
         'PaymentGateway': true,
         'EnableCardPage': false,
+        'TriggerReturnURL' : false,
       };
 
       result = await Eghlflutter.executePayment(payment);

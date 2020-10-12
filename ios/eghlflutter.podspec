@@ -24,5 +24,5 @@ A new Flutter plugin.
   s.preserve_paths = 'EGHL.framework'
   s.xcconfig = { 'OTHER_LDFLAGS' => '-framework EGHL' }
   s.vendored_frameworks = 'EGHL.framework'
-  s.resources = 'EGHL.bundle'
+  s.resources = 'flutter-plugin-eghl/ios/EGHL.bundle'
 end
