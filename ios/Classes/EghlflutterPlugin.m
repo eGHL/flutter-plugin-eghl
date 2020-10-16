@@ -23,7 +23,7 @@
       payParams.MerchantName = [call.arguments valueForKey:@"MerchantName"];
       payParams.PymtMethod = [call.arguments valueForKey:@"PymtMethod"];
       payParams.MerchantReturnURL = [call.arguments valueForKey:@"MerchantReturnURL"];
-      payParams.MerchantCallBackURL = [call.arguments valueForKey:@"MerchantCallbackURL"];
+      payParams.MerchantCallBackURL = [call.arguments valueForKey:@"MerchantCallBackURL"];
       payParams.MerchantApprovalURL = [call.arguments valueForKey:@"MerchantApprovalURL"];
       payParams.MerchantUnApprovalURL = [call.arguments valueForKey:@"MerchantUnApprovalURL"];
       payParams.CustMAC = [call.arguments valueForKey:@"CustMAC"];
@@ -94,7 +94,7 @@
               
               if(value)[dict setObject:value forKey:key];
           }
-//          
+          
           NSError* error;
           NSData* responseJsonData = [NSJSONSerialization dataWithJSONObject:dict options:kNilOptions error:&error];
           
