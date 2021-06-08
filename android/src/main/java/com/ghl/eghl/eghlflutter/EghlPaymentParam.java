@@ -11,6 +11,12 @@ public class EghlPaymentParam {
     @SerializedName("PymtMethod")
     private String paymentMethod = "";
 
+    @SerializedName("PaymentType")
+    private String paymentType = "";
+
+    @SerializedName("CustID")
+    private String custId = "";
+
     @SerializedName("ServiceId")
     private String serviceId = "";
 
@@ -174,6 +180,22 @@ public class EghlPaymentParam {
 
     public void setPaymentGateway(boolean paymentGateway) {
         this.paymentGateway = paymentGateway;
+    }
+
+    public String getPaymentType() {
+        return paymentType;
+    }
+
+    public void setPaymentType(String paymentType) {
+        this.paymentType = paymentType;
+    }
+
+    public String getCustId() {
+        return custId;
+    }
+
+    public void setCustId(String custId) {
+        this.custId = custId;
     }
 
     public String getCustIp() {

@@ -34,7 +34,7 @@ android {
 }
 
 dependencies {
-    implementation files('./eghl-sdk/eghl-sdk-v2.5.2.aar')
+    implementation files('./eghl-sdk/eghl-sdk-v2.5.6.aar')
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.google.code.gson:gson:2.8.0'
     implementation 'com.android.support:appcompat-v7:28.0.0'

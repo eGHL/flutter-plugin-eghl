@@ -62,6 +62,8 @@ public class EghlflutterPlugin implements MethodCallHandler, PluginRegistry.Acti
                   .setCardPageEnabled(paymentParam.getCardPage())
 
                   /*Optional fields*/
+                  .setPaymentType(paymentParam.getPaymentType())
+                  .setCustId(paymentParam.getCustId())
                   .setCustIp(paymentParam.getCustIp())
                   .setCustName(paymentParam.getCustName())
                   .setCustEmail(paymentParam.getCustEmail())
